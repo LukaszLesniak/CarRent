@@ -56,9 +56,14 @@
     <Compile Include="Migrations\201808091533030_price_on_car.Designer.cs">
       <DependentUpon>201808091533030_price_on_car.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201808211607280_addRentDispostions.cs" />
+    <Compile Include="Migrations\201808211607280_addRentDispostions.Designer.cs">
+      <DependentUpon>201808211607280_addRentDispostions.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Car.cs" />
     <Compile Include="Model\Client.cs" />
+    <Compile Include="Model\RentDisposition.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -73,6 +78,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201808091533030_price_on_car.resx">
       <DependentUpon>201808091533030_price_on_car.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808211607280_addRentDispostions.resx">
+      <DependentUpon>201808211607280_addRentDispostions.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

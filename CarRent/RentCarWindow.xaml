@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CarRent"
         mc:Ignorable="d"
-        Title="RentCarWindow" Height="800" Width="800">
-    <StackPanel Height="528" VerticalAlignment="Top" Margin="0,0,34,0">
+        Title="RentCarWindow" Height="575.732" Width="840.167">
+    <StackPanel Height="528" VerticalAlignment="Top" Margin="0,0,34,0" >
         <TextBlock Text="Rent a car" FontWeight="Bold" FontSize="45" TextAlignment="Center"/>
         <TextBlock Text="Client" FontWeight="Bold" FontSize="25" Margin="5"/>
 
@@ -20,8 +20,8 @@
 
 
             <TextBlock Text="Name" FontSize="20" Margin="5" Grid.Column="0" />
-            <TextBox Name="nameText" Padding="3" Margin="5" Grid.Column="1" 
-                     Text = "{Binding Name, Mode = TwoWay}" />
+            <TextBox Name="FirstNameText" Padding="3" Margin="5" Grid.Column="1" 
+                     Text = "{Binding FirstName, Mode = TwoWay}" TextChanged="FirstNameText_TextChanged" />
 
         </Grid>
 
@@ -34,7 +34,7 @@
 
             <TextBlock Text="LastName" FontSize="20" Margin="5" Grid.Column="0"  />
             <TextBox Name="lastNameText" Padding="3" Margin="5" Grid.Column="1" 
-                     Text = "{Binding LastName, Mode = TwoWay}" />
+                     Text = "{Binding LastName, Mode = TwoWay}" TextChanged="lastNameText_TextChanged" />
 
         </Grid>
 
@@ -46,7 +46,7 @@
             </Grid.ColumnDefinitions>
 
             <TextBlock Text="Driver licence number" FontSize="20" Margin="5" Grid.Column="0" />
-            <TextBox Name="DriverLicenceText" Padding="3" Margin="5" Grid.Column="1"
+            <TextBox Name="driverLicenceText" Padding="3" Margin="5" Grid.Column="1"
                      Text = "{Binding DriverLicense, Mode = TwoWay}" TextChanged="DriverLicenceText_TextChanged" />
 
         </Grid>
@@ -100,33 +100,29 @@
 
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="150"/>
-                <ColumnDefinition Width="100"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="30"/>
-                <ColumnDefinition Width="*"/>
-
+                <ColumnDefinition Width="67*"/>
+                <ColumnDefinition Width="237*"/>
             </Grid.ColumnDefinitions>
 
-
-            <TextBlock Text="Loan peroid" FontSize="20" Margin="5" Grid.Column="0" />
-            <TextBlock Text="Date: from" FontSize="15" Margin="5" Grid.Column="1"   />
-            <TextBox Name="dateFromText" Padding="3" Margin="0" Grid.Column="2" 
-                     Text = "{Binding from, Mode = TwoWay}" />
-            <TextBlock Text="to" FontSize="15" Margin="5" Grid.Column="3" TextAlignment="Center"  />
-            <TextBox Name="dateToText" Padding="3" Margin="0" Grid.Column="4" 
-                     Text = "{Binding Name, Mode = TwoWay}" />
+            <TextBlock Text="Price" FontSize="20" Margin="5" Grid.Column="0"/>
+            <ComboBox TargetUpdated="PriceComboBox_TargetUpdated"  Padding="3" Margin="5" Name="PriceComboBox" SelectionChanged="Prices" Loaded="Prices_Loaded" Grid.Column="1" Grid.ColumnSpan="2"/>
 
         </Grid>
 
+
+
+
+
         <Grid>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="173*"/>
+                <ColumnDefinition Width="93*"/>
+                <ColumnDefinition Width="266*"/>
+                <ColumnDefinition Width="266*"/>
             </Grid.ColumnDefinitions>
 
-            <Button Content="Cancel" FontSize="20" Width="200" Margin="20" Click="Cancel" Grid.Column="0" Foreground="Red"  />
-            <Button Content="Apply" FontSize="20" Width="200" Margin="20" Click="ApplyButton" Grid.Column="2" FontWeight="Bold" Foreground="Green"/>
+            <Button Content="Cancel" FontSize="20" Width="200" Margin="33,20" Click="Cancel" Grid.Column="0" Foreground="Red" Grid.ColumnSpan="2"  />
+            <Button Content="Apply" FontSize="20" Width="200" Margin="33,20" Click="ApplyButton" Grid.Column="3" FontWeight="Bold" Foreground="Green"/>
 
 
         </Grid>

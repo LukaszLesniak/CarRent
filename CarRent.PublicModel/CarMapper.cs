@@ -12,6 +12,8 @@ namespace CarRent.PublicModel
                 Colour = car.Colour,
                 Price = car.Price
             };
+
+                      
         }
     }
 }

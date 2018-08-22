@@ -24,12 +24,13 @@
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="150"/>
-                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="29*"/>
+                <ColumnDefinition Width="185*"/>
             </Grid.ColumnDefinitions>
 
             <TextBlock Text="Name" FontSize="20" Margin="5" Grid.Column="0"  />
             <TextBox Name="CarNameText" Padding="3" Margin="5" Grid.Column="1" 
-                     Text = "{Binding CarName, Mode = TwoWay}" />
+                     Text = "{Binding CarName, Mode = TwoWay}" TextChanged="CarNameText_TextChanged" Grid.ColumnSpan="2" />
 
 
         </Grid>
@@ -72,8 +73,8 @@
 
             <TextBlock Text="List" FontSize="20" Margin="5" Grid.Column="0"/>
             <ComboBox Loaded="ComboBox_Loaded" SelectionChanged="ComboBox_SelectionChanged" Padding="3" Margin="5" Grid.Column="1" />
-            
-            
+
+
         </Grid>
 
 

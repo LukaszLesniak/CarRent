@@ -6,6 +6,7 @@ namespace CarRent.Model
     {
         public DbSet<Car> Cars { get; set; }
         public DbSet<Client> Clients { get; set; }
+        public DbSet<RentDisposition> RentDispostions { get; set; }
 
         public CarRentContext() : base("Data Source=DESKTOP-E77O8UU;Database=CarRent;Integrated Security=True;")
         {

@@ -32,10 +32,7 @@ namespace CarRent
             MessageBox.Show(message);
         }
 
-        private void Cancel(object sender, RoutedEventArgs e)
-        {
-            Close();
-        }
+       
 
         private void ComboBox_Loaded(object sender, RoutedEventArgs e)
         {
@@ -87,6 +84,17 @@ namespace CarRent
         {
 
         }
+
+        private void CarNameText_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void Cancel(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+       
     }
 }
 
